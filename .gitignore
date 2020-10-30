@@ -6,7 +6,8 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-
+#log errors
+debug.log
 # dependencies
 /node_modules
 
