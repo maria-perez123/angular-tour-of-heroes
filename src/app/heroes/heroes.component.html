@@ -2,16 +2,21 @@
 <div>
   <label
     >Hero name:
-    <input #heroName />
+    <input #heroName data-cy="addhero-input" />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value = ''">add</button>
+  <button
+    (click)="add(heroName.value); heroName.value = ''"
+    data-cy="add-button"
+  >
+    add
+  </button>
 </div>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{ hero.id }}" data-cy="list-of-heroes">
       <span class="badge">{{ hero.id }}</span> {{ hero.name }}
     </a>
-    <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
+    <button class="delete" title="delete hero" (click)="delete(hero)" data-cy="delete-button">x</button>
   </li>
 </ul>
