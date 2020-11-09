@@ -1,12 +1,13 @@
 {
-    "fileServerFolder": ".",
-    "fixturesFolder": "./src/fixtures",
-    "integrationFolder": "./src/integration",
-    "pluginsFile": "./src/plugins/index",
-    "supportFile": false,
-    "video": true,
-    "videosFolder": "../../dist/cypress/angular-tour-of-heroes-e2e/videos",
-    "screenshotsFolder": "../../dist/cypress/angular-tour-of-heroes-e2e/screenshots",
-    "chromeWebSecurity": false,
-    "baseUrl": "http://localhost:4200"
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": false,
+  "video": true,
+  "videosFolder": "../../dist/cypress/angular-tour-of-heroes-e2e/videos",
+  "screenshotsFolder": "../../dist/cypress/angular-tour-of-heroes-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "baseUrl": "http://localhost:4200",
+  "projectId": "bktq6y"
 }

@@ -14,7 +14,6 @@ describe('search filter and message division tests', () => {
   })
 
   it('it test the titles and messages of fetched heroes appears', ()=>{
-    cy.visit('/')
     cy.contains('TOP HEROES', {matchCase:false})
     messageFetchHeroes()
     cy.visit('/heroes')
@@ -22,7 +21,7 @@ describe('search filter and message division tests', () => {
     messageFetchHeroes()
   })
 
-  it('it test the  search filter', () => {
+  it('it test the  search filter works', () => {
     const term='m'
     cy.get('input').type(term)
     cy.get('[data-y="search-hero"]').each(($li) => {
