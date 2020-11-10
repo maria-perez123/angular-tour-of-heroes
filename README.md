@@ -22,25 +22,25 @@ Utilice el comando `ng e2e` para ejecutar los tests end-to-end via [Cypress](htt
 
 ## Configuración de Cypress
 
-La configuracíón de Cypress se hace siguiendo los pasos indicados en el siguiente [blog](https://medium.com/@joaqcid/5-steps-to-set-cypress-as-your-e2e-test-runner-in-angular-bbaf63619a1b). Allí se indica como desinstalar Protactor que viene por defecto en angular, y habilitar cypress como framework de ejecución de pruebas.
+La configuracíón de Cypress se hace siguiendo los pasos indicados en el siguiente [blog](https://medium.com/@joaqcid/5-steps-to-set-cypress-as-your-e2e-test-runner-in-angular-bbaf63619a1b). Allí se indica como desinstalar Protractor que viene por defecto en angular, y habilitar cypress como framework de ejecución de pruebas.
 
 ## Estructura de la carpeta E2E
 
-e2e
-|---src
-|------fixtures
-|---------example.json
-|------integration
-|---------app.spec.ts
-|---------routes.spec.ts
-|------plugin
-|---------index.js
-|------support
-|---------app.po.ts
-|---------commands.ts
-|---------index.ts
-|---cypress.json
-|---tsconfig.e2e.json
+e2e  
+|---src  
+|------fixtures  
+|---------example.json  
+|------integration  
+|---------app.spec.ts  
+|---------routes.spec.ts  
+|------plugin  
+|---------index.js  
+|------support  
+|---------app.po.ts  
+|---------commands.ts  
+|---------index.ts  
+|---cypress.json  
+|---tsconfig.e2e.json  
 |---tsconfig.json
 
 ### Archivos relevantes
@@ -68,8 +68,8 @@ Se divide en dos conjuntos de tests: los dos contienen el hook `beforeEach`, uno
 - El id del heroe es contenido en la url de la página de detail, y el mensaje del heroe cargado aparece.
 - El nombre del heroe puede ser actualizado con el botón "save", y el titulo de la página detail contiene el nombre en mayúscula.
 - El nombre del heroe no debe actualizarse si se presiona el botón "goback"
-  -Un heroe puede ser añadido a la lista con el botón "add" y el número de elementos en la lista aumenta en uno.
-- Un heroe puede ser eliminado y el número de elementos disminuye en uno.
+- Un heroe puede ser añadido a la lista con el botón "add" y el número de elementos en la lista aumenta en uno.
+- Un heroe puede ser eliminado con el botón "delete" y el número de elementos disminuye en uno.
 
 ### routes.spec.ts
 
