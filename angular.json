@@ -60,9 +60,10 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "angular-tour-of-heroes:build"
+            "browserTarget": "angular-tour-of-heroes:build",
+            "extraWebpackConfig": "./cypress/coverage.webpack.js"
           },
           "configurations": {
             "production": {
@@ -99,7 +100,7 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "cypress/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -107,10 +108,35 @@
           }
         },
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "builder": "@briebug/cypress-schematic:cypress",
           "options": {
-            "cypressConfig": "e2e/cypress.json",
-            "tsConfig": "e2e/tsconfig.e2e.json"
+            "devServerTarget": "angular-tour-of-heroes:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-tour-of-heroes:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-tour-of-heroes:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-tour-of-heroes:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-tour-of-heroes:serve",
+            "watch": true,
+            "headless": false
           },
           "configurations": {
             "production": {
